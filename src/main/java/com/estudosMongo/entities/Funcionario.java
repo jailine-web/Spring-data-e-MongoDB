@@ -1,14 +1,16 @@
 package com.estudosMongo.entities;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Data;
 
 @Data
-@Document
+@Document(collection="usuarios")
 public class Funcionario {
 	
 	@Id
@@ -20,7 +22,8 @@ public class Funcionario {
 	
 	private BigDecimal salario;
 	
-	private Funcionario func;
+	@DBRef
+	private Funcionario supervisor;
 
 	public String getCodigo() {
 		return codigo;
@@ -46,12 +49,12 @@ public class Funcionario {
 		this.idade = idade;
 	}
 
-	public Funcionario getFunc() {
-		return func;
+	public Funcionario getSupervisor() {
+		return supervisor;
 	}
 
-	public void setFunc(Funcionario func) {
-		this.func = func;
+	public void setSupervisor(Funcionario supervisor) {
+		this.supervisor = supervisor;
 	}
 
 	public BigDecimal getSalario() {
@@ -60,6 +63,23 @@ public class Funcionario {
 
 	public void setSalario(BigDecimal salario) {
 		this.salario = salario;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(codigo);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Funcionario other = (Funcionario) obj;
+		return Objects.equals(codigo, other.codigo);
 	}
 	
 	

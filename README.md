@@ -15,7 +15,36 @@
 ### Ao terminar de baixar o mongoDb crie uma variavél de ambiente no usuário do sistema no campo path. 
 ### Para isso insira o caminho da ferramenta atá a pasta bin no fim da variável path.
 
-### Para startar o mongoDB no terminal basta abrir o cmd e digitar: mongod
+### Para startar o mongoDB no terminal basta abrir o cmd e digitar o comando a seguir e dar enter: mongod
 
 ### As inserções do banco poderão ser visualizadas na ferramenta mongo compass, assim como todas as operações relacionadas ao banco de dados.
 
+### Dependências utilizadas:
+
+#### Spring web
+#### spring-boot-devtools
+#### lombok
+#### mongo
+
+### Dependencia do mongo:
+
+    <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+	</dependency>
+
+
+#### Inserção via postman
+
+Método: Post
+body --> raw --> json
+
+{
+    "nome": "João Alvez",
+    "idade": 30,
+    "salario": 2500,
+    "supervisor": {
+        "codigo": "6478f2fcbd3fc303197239d5"
+    }
+   
+}

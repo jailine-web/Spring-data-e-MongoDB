@@ -29,7 +29,23 @@ public class FuncionarioServiceImpl implements FuncionarioServico {
 
 	@Override
 	public Funcionario criar(Funcionario f) {
+		Funcionario supervisor =  funcRepo.findById(f.getSupervisor().getCodigo())
+				.orElseThrow(()-> new IllegalArgumentException("Supervisor não encontrado"));
+		
+		f.setSupervisor(supervisor);
+		
 		return funcRepo.save(f);
+	}
+
+
+	@Override
+	public List<Funcionario> obterFuncionariosIdade(Integer de, Integer ate) {
+		return funcRepo.obterFuncionarioPorIntervaloDeIdade(de, ate);
+	}
+
+	@Override
+	public List<Funcionario> findByNome(String nome) {
+		return funcRepo.findByNome(nome) ;
 	}
 
 }

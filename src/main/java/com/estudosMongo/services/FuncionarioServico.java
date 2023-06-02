@@ -12,5 +12,8 @@ public interface FuncionarioServico {
 	
 	public Funcionario criar(Funcionario f);
 	
+	public List<Funcionario> obterFuncionariosIdade(Integer de, Integer ate);
+	
+	public List<Funcionario> findByNome(String nome);
 	
 }
