@@ -1,32 +1,33 @@
-# Spring data e MongoDB
+## Spring data e MongoDB
 
-## Crud com Spring data e MongoDB
-### Inserção, exclusão, consulta e atualizações de dados no banco de dados Mongo.
+### Crud com Spring data e MongoDB
+#### Inserção, exclusão, consulta e atualizações de dados no banco de dados Mongo.
 
-# Ferramentas utilizadas:
+### Ferramentas utilizadas:
 
-### Spring  para desenvolvimento do código Java.    --> (https://spring.io/tools)
-### MongoDB community para armazenamento dos dados. --> (https://www.mongodb.com/try/download/community)
-### Mongo compass para a manipulação dos dados.     --> (https://www.mongodb.com/try/download/compass)
-### Postman para testar requisições.                --> (https://www.postman.com/downloads/)
+#### Spring  para desenvolvimento do código Java.    --> (https://spring.io/tools)
+#### MongoDB community para armazenamento dos dados. --> (https://www.mongodb.com/try/download/community)
+#### Mongo compass para a manipulação dos dados.     --> (https://www.mongodb.com/try/download/compass)
+#### Postman para testar requisições.                --> (https://www.postman.com/downloads/)
 
-## Passos importantes:
+### Passos importantes:
 
-### Ao terminar de baixar o mongoDb crie uma variavél de ambiente no usuário do sistema no campo path. 
-### Para isso insira o caminho da ferramenta atá a pasta bin no fim da variável path.
+#### Ao terminar de baixar o mongoDb crie uma variavél de ambiente no usuário do sistema no campo path. 
+#### Para isso insira o caminho da ferramenta atá a pasta bin no fim da variável path.
 
-### Para startar o mongoDB no terminal basta abrir o cmd e digitar o comando a seguir e dar enter: mongod
+#### Para startar/iniciar o mongoDB no terminal basta abrir o cmd e digitar o comando a seguir e dar enter: mongod
+#### Para parar o serviço basta digitar duas vezes: ctrl + c
 
-### As inserções do banco poderão ser visualizadas na ferramenta mongo compass, assim como todas as operações relacionadas ao banco de dados.
+#### As inserções do banco poderão ser visualizadas na ferramenta mongo compass, assim como todas as operações relacionadas ao banco de dados.
 
-### Dependências utilizadas:
+#### Dependências utilizadas:
 
-#### Spring web
-#### spring-boot-devtools
-#### lombok
-#### mongo
+##### Spring web
+##### spring-boot-devtools
+##### lombok
+##### mongo
 
-### Dependencia do mongo:
+#### Dependencia do mongo:
 
     <dependency>
 			<groupId>org.springframework.boot</groupId>
